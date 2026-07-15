@@ -1,5 +1,5 @@
 package guru.spring.demo.Controller;
-import guru.spring.demo.TacoOrder;
+import guru.spring.demo.Model.TacoOrder;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -28,7 +28,5 @@ public class OrderController {
     public String orderForm(@ModelAttribute TacoOrder tacoOrder) {
         return "TacoOrder";
     }
-
-
 
 }

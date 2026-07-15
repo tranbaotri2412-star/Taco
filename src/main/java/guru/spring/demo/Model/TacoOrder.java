@@ -1,20 +1,24 @@
-package guru.spring.demo;
+package guru.spring.demo.Model;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.CreditCardNumber;
+
+import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 import lombok.Data;
-import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.support.SessionStatus;
+
 @Slf4j
 @Data
-public class TacoOrder {
+public class TacoOrder implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    private long id;
+    private Date placedAt;
 
     @NotBlank(message="Delivery name is required")
     private String deliveryName;
@@ -46,6 +50,5 @@ public class TacoOrder {
     public void addTaco(Taco taco) {
         tacos.add(taco);
     }
-
 
 }

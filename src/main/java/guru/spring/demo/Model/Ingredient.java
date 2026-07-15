@@ -1,4 +1,4 @@
-package guru.spring.demo;
+package guru.spring.demo.Model;
 
 import lombok.Data;
 @Data

@@ -1,7 +1,8 @@
-package guru.spring.demo;
+package guru.spring.demo.Model;
 import java.util.HashMap;
 import java.util.Map;
-import static guru.spring.demo.Ingredient.Type;
+import static guru.spring.demo.Model.Ingredient.Type;
+
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
